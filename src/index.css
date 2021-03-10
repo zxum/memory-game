@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*     font-family: 'Comfortaa', cursive;
+
+    font-family: 'Pacifico', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9F7F7;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.butterfly-h1 {
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    color: #112D4E;
+}
+
+.header-wrap {
+    width: 422px;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.memory-game {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3F72AF;
+    font-family: 'Comfortaa', cursive;
+}
+
+.board {
+    background-color: #DBE2EF;
+    box-shadow: 0 4px 10px #3F72AF;
+    height: 500px;
+    width: 600px;
+    border-radius: 2.5rem;
 }
