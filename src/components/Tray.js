@@ -11,7 +11,7 @@ function Tray(props) {
     for (let i = 1; i < 17; i++) {
       butterflyArr.push({
         id: i,
-        imgsrc: "/images/butterfly_" + i + ".png"
+        imgsrc: "./images/butterfly_" + i + ".png"
       })
     }
     return butterflyArr
