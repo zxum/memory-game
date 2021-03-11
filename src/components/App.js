@@ -8,7 +8,7 @@ function App() {
     <div className="app">
         <Header />
         <MainGame /> 
-        <Footer /> 
+        {/* <Footer />  */}
     </div>
   );
 }
