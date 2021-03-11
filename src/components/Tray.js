@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import Image from './Image'
 
-function Tray() {
-
+function Tray(props) {
+  let {currScore, bestScore} = props
   let [butterflies, setButterflies] = useState(createButterflyArr)
-  let [selections, setSelection] = useState([])
 
 
   function createButterflyArr() {
     let butterflyArr = []
     for (let i = 1; i < 17; i++) {
-      butterflyArr.push("/images/butterfly_" + i + ".png")
+      butterflyArr.push({
+        id: i,
+        imgsrc: "/images/butterfly_" + i + ".png"
+      })
     }
     return butterflyArr
   }
@@ -24,8 +26,17 @@ function Tray() {
     }
   }
 
+  useEffect(()=>{
+    let newArr = [...butterflies]
+    shuffleArray(newArr)
+    setButterflies(newArr)
+  },[currScore,bestScore])
+
   let butterflyList = butterflies.map(butterfly => {
-    return <Image imgsrc={butterfly} /> 
+    return <Image key={butterfly.id} 
+                  imgsrc={butterfly.imgsrc} 
+                  id={butterfly.id} 
+                  handleGame={props.handleGame} /> 
   })
 
   return (

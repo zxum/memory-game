@@ -2,9 +2,7 @@ import React from 'react'
 
 function Image(props) {
   return (
-    <div>
-      <img src={props.imgsrc} className="butterfly-img" /> 
-    </div>
+      <img src={props.imgsrc} id={props.id} className="butterfly-img" onClick={props.handleGame}/> 
   )
 }
 
